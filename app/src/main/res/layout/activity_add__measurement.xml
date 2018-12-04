@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Flotting_Button.Add_Measurement">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_add__measurement" />
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/cholestrol"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="75dp"
+               android:gravity="left"
+               android:textStyle="bold"
+               android:layout_marginLeft="20dp"
+               android:text="@string/text_Cholesterol"
+               android:textColor="@color/colorPrimary"
+               tools:ignore="RtlHardcoded" />
+
+
+
+           <LinearLayout
+               android:id="@+id/layoutHDL"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/text1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:textColor="#000"
+                   android:text="@string/hdl_cholesterol"
+                   android:layout_marginStart="20dp" />
+
+               <Switch
+                   android:id="@+id/switchhdl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:clickable="true"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"
+                   android:focusable="true" />
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/layoutLDL"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:textColor="#000"
+                   android:text="@string/ldl_cholesterol"
+                   android:layout_marginStart="20dp" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_below="@id/layoutLDL"
+               android:id="@+id/layoutTriglycerides"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content"
+               tools:ignore="ObsoleteLayoutParam">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/measurement" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/fitness"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_fitness" />
+
+
+           <LinearLayout
+               android:id="@+id/layoutbodyFat"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/body_fitness" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layoutCaloriesConsumed"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/calories_con_fitness" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layoutDailySteps"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/daily_fitness" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layoutWeight"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/weight_fitness" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/glucose"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_glucose"/>
+
+
+           <LinearLayout
+               android:id="@+id/layoutCaloriesExpended"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_marginTop="10dp"
+                   android:text="@string/calories_exp_fitness"
+                   android:textColor="#000" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:paddingLeft="25dp"
+                   android:paddingRight="25dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layoutA1C"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/a1c_glu"  />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_below="@id/layoutA1C"
+               android:id="@+id/layoutBloodGlucose"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/blood_glu" />
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+
+           </LinearLayout>
+
+
+           <TextView
+               android:id="@+id/hiv"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_hiv"/>
+
+
+           <LinearLayout
+               android:id="@+id/layoutCD4"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/cd4_hiv"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutCD4"
+               android:id="@+id/layoutCD4_cell"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/cd4_cell_hiv"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutCD4_cell"
+               android:id="@+id/layoutHivviral"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/cd4_cell_hiv"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp"/>
+
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/imaging"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_hiv"/>
+           <LinearLayout
+               android:layout_below="@id/imaging"
+               android:id="@+id/layoutTScore"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/tscore_imaging"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:layout_marginTop="15dp"
+                   android:paddingLeft="25dp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/lab"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_lab"/>
+           <LinearLayout
+               android:layout_below="@id/lab"
+               android:id="@+id/layoutCreatinine"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/creatinint_lab"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutCreatinine"
+               android:id="@+id/layoutEgfr"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/egfr_lab"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:layout_marginTop="15dp"
+                   android:paddingLeft="25dp"/>
+
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/other"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_other"/>
+
+           <LinearLayout
+               android:layout_below="@id/other"
+               android:id="@+id/layoutBowel"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/cd4_cell_hiv"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutBowel"
+               android:id="@+id/layoutInr"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/inr_other"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutInr"
+               android:id="@+id/layoutMoodLevel"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/mood_other"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutMoodLevel"
+               android:id="@+id/layoutPeakFlow"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/peak_othr"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+
+
+           <LinearLayout
+               android:layout_below="@id/layoutPeakFlow"
+               android:id="@+id/layoutPainLevel"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/pain_other"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutPainLevel"
+               android:id="@+id/layoutSpO2"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/spo2_other"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="25dp" />
+
+
+           </LinearLayout>
+
+
+           <TextView
+               android:id="@+id/vitals"
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:textStyle="bold"
+               android:gravity="start"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorPrimary"
+               android:text="@string/text_vitals"/>
+
+           <LinearLayout
+               android:layout_below="@id/vitals"
+               android:id="@+id/layoutBloodPressure"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/blood_vitals"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutBloodPressure"
+               android:id="@+id/layoutPulse"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/pulse_vitals"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="25dp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_below="@id/layoutPulse"
+               android:id="@+id/layoutTempera"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:textColor="#000"
+                   android:text="@string/temperature_vitals"/>
+
+               <Switch
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="25dp"
+                   android:paddingLeft="25dp"
+                   android:layout_marginTop="15dp" />
+
+
+           </LinearLayout>
+       </LinearLayout>
+   </ScrollView>
+
+
+</RelativeLayout>

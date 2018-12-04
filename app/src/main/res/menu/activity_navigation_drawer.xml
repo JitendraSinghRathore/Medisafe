@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/profile">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_send"
+                    android:icon="@drawable/navplus"
+                    android:title="@string/adddependent" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/medfriends">
+            <menu>
+                <item
+                    android:id="@+id/nav_shaare"
+                    android:icon="@drawable/navplus"
+                    android:title="@string/invitemed" />
+                <item
+                    android:id="@+id/nav_saend"
+                    android:icon="@drawable/navcode"
+                    android:title="@string/medifriendcode" />
+            </menu>
+        </item>
+    </group>
+
+
+
+</menu>

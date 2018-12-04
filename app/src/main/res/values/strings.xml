@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">Medisafe</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_shop">Home</string>
+    <string name="title_gifts">Medications</string>
+    <string name="title_cart">Update</string>
+    <string name="title_profile">More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_activitya">HomeActivitya</string>
+
+
+    <!-- TODO: Strings of More Fragment's -->
+    <string name="measurement">Measurement</string>
+    <string name="diary">Diary</string>
+    <string name="appointment">Appointment</string>
+    <string name="doctor">Doctor</string>
+    <string name="refills">Refills</string>
+    <string name="report">Report</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help and Support</string>
+    <string name="upgrade">Upgrade to Premium</string>
+    <string name="title_activity_deli">Deli</string>
+
+    <!-- TODO: Strings of TabLayout Icon's Text -->
+    <string name="home">Home</string>
+    <string name="medi">Medications</string>
+    <string name="update">Updates</string>
+    <string name="more">More</string>
+    <string name="title_activity_dela">Dela</string>
+
+
+    <!-- TODO: Strings of Flotting Button -->
+    <string name="action_settings"></string>
+    <string name="camera">Add Medication</string>
+    <string name="save">Add Dose</string>
+    <string name="update_password">Add Measurement</string>
+
+    <!-- TODO: Strings of Flotting Button -->
+    <string name="username">Username</string>
+    <string name="editprofile">Editprofile</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <!-- TODO: Strings of Navigation Drawer  -->
+    <string name="profile">Profile</string>
+    <string name="adddependent">Add Dependent</string>
+    <string name="medfriends">Medfriends</string>
+    <string name="invitemed">Invite Medifriend</string>
+    <string name="medifriendcode">Medifriend Code</string>
+
+
+    <!-- TODO: Strings of Add FlottingButton  -->
+    <string name="title_activity_add__medication">Add_Medication</string>
+    <string name="title_activity_add__measurement">Add_Measurement</string>
+    <string name="title_activity_add__dose">Add_Dose</string>
+
+
+    <!-- TODO: Strings of Add Dose  -->
+    <string name="addmedtitle">Add Medication</string>
+    <string name="medication">Medication Name</string>
+    <string name="edittext">type active ingredient or brand name</string>
+    <string name="nextbutton">Next</string>
+
+
+    <!-- TODO: Strings of Add Measurement  -->
+    <string name="selectmeaure">Select Measurement</string>
+    <!-- TODO: Strings of Add Measurement(Cholesterol Part)  -->
+    <string name="text_Cholesterol">Cholesterol</string>
+    <string name="hdl_cholesterol">HDL Cholesterol</string>
+    <string name="ldl_cholesterol">LDL Cholesterol</string>
+    <string name="trigl_cholesterol">Triglycerides</string>
+
+    <!-- TODO: Strings of Add Measurement(Fitness)  -->
+    <string name="text_fitness">Fitness</string>
+    <string name="body_fitness">Body Fat</string>
+    <string name="calories_con_fitness">Calories Consumed</string>
+    <string name="calories_exp_fitness">Calories Expended</string>
+    <string name="daily_fitness">Daily Steps</string>
+    <string name="weight_fitness">Weight</string>
+
+    <!-- TODO: Strings of Add Measurement(Glucose)  -->
+    <string name="text_glucose">Glucose</string>
+    <string name="a1c_glu">A1C</string>
+    <string name="blood_glu">Blood Glucose</string>
+
+
+    <!-- TODO: Strings of Add Measurement(HIV)  -->
+    <string name="text_hiv">HIV</string>
+    <string name="cd4_hiv">CD4%</string>
+    <string name="cd4_cell_hiv">CD4 cell count</string>
+    <string name="hiv_virel_hiv">HIV Viral Load</string>
+
+    <!-- TODO: Strings of Add Measurement(Imaging)  -->
+    <string name="text_imaging">Imaging</string>
+    <string name="tscore_imaging">T Score</string>
+
+    <!-- TODO: Strings of Add Measurement(Lab)  -->
+    <string name="text_lab">Lab</string>
+    <string name="creatinint_lab">Creatinine</string>
+    <string name="egfr_lab">EGFR</string>
+
+
+    <!-- TODO: Strings of Add Measurement(Other)  -->
+    <string name="text_other">Other</string>
+    <string name="bowel_othr">Bowel Movement Level</string>
+    <string name="inr_other">INR</string>
+    <string name="mood_other">Mood Level</string>
+    <string name="peak_othr">Peak Flow</string>
+    <string name="pain_other">Pain Level</string>
+    <string name="spo2_other">SpO2</string>
+
+
+    <!-- TODO: Strings of Add Measurement(Vitals)  -->
+    <string name="text_vitals">Vitals</string>
+    <string name="blood_vitals">Blood Perssure</string>
+    <string name="pulse_vitals">Pulse</string>
+    <string name="temperature_vitals">Temperature</string>
+
+
+    <!-- TODO: Strings of Add Measurement(Vitals)  -->
+    <string name="textreminder_time">Reminder Times</string>
+    <string name="schedule">Schedule</string>
+
+</resources>

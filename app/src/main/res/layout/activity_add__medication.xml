@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    tools:context=".Flotting_Button.Add_Medication">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_add__medication"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/madinamecard"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/mediname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/medication"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/addmedi"/>
+
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autocum"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mediname"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="@string/edittext"
+                android:textColorHint="#cccccc"/>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <Button
+        android:id="@+id/nextdefault"
+        android:layout_width="110dp"
+        android:layout_below="@id/madinamecard"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="#999999"
+        android:text="@string/nextbutton"
+        android:layout_marginTop="17dp"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/nextchange"
+        android:layout_width="110dp"
+        android:layout_below="@id/madinamecard"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="#FFFF"
+        android:visibility="invisible"
+        android:text="@string/nextbutton"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="17dp"
+        android:layout_height="48dp" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/nextchange"
+        android:id="@+id/timeremindercard"
+        android:layout_width="340dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="13dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="@dimen/cardElevation"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/timeremswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/remindetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/textreminder_time"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@id/timereminderhide"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/timereminderhide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/addmedi" />
+
+            <ImageView
+                android:id="@+id/timeremindershow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:rotation="180"
+                android:visibility="invisible"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/addmedi" />
+
+
+
+
+
+            <TextView
+                android:layout_below="@id/timereminderhide"
+                android:id="@+id/timeday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Once a day"
+                android:textSize="15dp" />
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/timereminderhide"
+                android:layout_toLeftOf="@id/timereminderhide"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dropdown"
+                android:layout_marginRight="0dp"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <TextView
+                android:id="@+id/timeset"
+                android:layout_below="@id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/remindetext"
+                android:text="8:00 AM"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:layout_alignLeft="@+id/remindetext" />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/timereminderhide"
+                android:text="Take 1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"
+                android:layout_toLeftOf="@+id/timereminderhide" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinnertimerem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>
