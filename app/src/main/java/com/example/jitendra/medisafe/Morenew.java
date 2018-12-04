@@ -99,6 +99,8 @@ public class Morenew extends Fragment {
         @Override
         public int getItemCount() {
             return moreData.size();
+            
+            //gitlab Comment 
         }
     }
     }
