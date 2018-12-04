@@ -100,7 +100,9 @@ public class Morenew extends Fragment {
         public int getItemCount() {
             return moreData.size();
             
-            //gitlab Comment 
+            //gitlab Comment
+
+            //git lab is not do it
         }
     }
     }
