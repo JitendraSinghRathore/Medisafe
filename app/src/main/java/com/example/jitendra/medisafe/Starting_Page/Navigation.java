@@ -1,6 +1,7 @@
 package com.example.jitendra.medisafe.Starting_Page;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -19,6 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.jitendra.medisafe.Morenew;
 import com.example.jitendra.medisafe.R;
@@ -30,11 +33,14 @@ import com.example.jitendra.medisafe.Tab_Navi_Fragment.Update;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     TabLayout tabLayout;
     ViewPager viewPager;
     android.app.ActionBar actionBar;
+    CircleImageView circleImageView;
 
     private int tabicon[]={R.drawable.home,R.drawable.madici,R.drawable.update,R.drawable.list};
 
@@ -50,6 +56,17 @@ public class Navigation extends AppCompatActivity
         tabLayout=(TabLayout)findViewById(R.id.tabview);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcon();
+
+        circleImageView=(CircleImageView) findViewById(R.id.profile_image);
+
+
+        circleImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Navigation.this,Edit_Activity.class);
+                startActivity(intent);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

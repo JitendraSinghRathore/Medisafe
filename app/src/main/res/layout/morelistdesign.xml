@@ -8,13 +8,16 @@
     <LinearLayout
         android:id="@+id/liner1"
         android:layout_width="match_parent"
+        android:paddingVertical="10dp"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/morelistimage"
-            android:layout_width="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="25dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_height="25dp"
             android:src="@drawable/heart"/>
@@ -23,7 +26,6 @@
             android:id="@+id/morelisttext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="25dp"
             android:textColor="#000"
             android:text="@string/measurement"/>

@@ -14,28 +14,30 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleimg"
-        android:layout_width="70dp"
+        android:layout_width="60dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/splash"
-        android:layout_height="70dp" />
+        android:src="@drawable/user_pro"
+        android:layout_height="60dp" />
 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/circleimg"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="13dp"
-        android:textSize="15dp"
+        android:textSize="13dp"
         android:textColor="#FFFF"
         android:text="@string/username"/>
 
     <TextView
+        android:id="@+id/edit_profile"
         android:layout_width="wrap_content"
         android:text="@string/editprofile"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textSize="17dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="3dp"
+        android:textSize="15dp"
         android:textColor="#FFFF"
         android:layout_toRightOf="@id/circleimg"
         android:layout_below="@id/username"/>

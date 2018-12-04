@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".Starting_Page.Edit_Activity"
+            android:label="@string/title_activity_edit_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Starting_Page.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +44,8 @@
             android:name=".Flotting_Button.Add_Dose"
             android:label="@string/title_activity_add__dose"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Deliteit"></activity>
-        <activity android:name=".DeliteAuto"></activity>
+        <activity android:name=".Deliteit" />
+        <activity android:name=".DeliteAuto" />
     </application>
 
 </manifest>

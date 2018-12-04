@@ -127,5 +127,6 @@
     <!-- TODO: Strings of Add Measurement(Vitals)  -->
     <string name="textreminder_time">Reminder Times</string>
     <string name="schedule">Schedule</string>
+    <string name="title_activity_edit_">Edit_Activity</string>
 
 </resources>
