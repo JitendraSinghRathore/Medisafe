@@ -47,7 +47,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
-
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+    </style>
     <!-- TODO: Strings of Navigation Drawer  -->
     <string name="profile">Profile</string>
     <string name="adddependent">Add Dependent</string>
@@ -128,5 +130,12 @@
     <string name="textreminder_time">Reminder Times</string>
     <string name="schedule">Schedule</string>
     <string name="title_activity_edit_">Edit_Activity</string>
+    <string name="title_activity_sign__up">Sign_Up</string>
+    <string name="title_activity_measurment">Measurment</string>
+    <string name="title_activity_diary">Diary</string>
+    <string name="title_activity_add_diary">AddDiary</string>
+    <string name="title_activity_appoinments">Appoinments</string>
+    <string name="title_activity_add__appointment">Add_Appointment</string>
+    <string name="title_activity_add__doctor">Add_Doctor</string>
 
 </resources>

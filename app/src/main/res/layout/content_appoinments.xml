@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MoreActivitys.Add_Measurement"
-    tools:showIn="@layout/activity_add__measurement">
+    tools:context=".MoreActivitys.Appoinments"
+    tools:showIn="@layout/activity_appoinments">
 
 </android.support.constraint.ConstraintLayout>

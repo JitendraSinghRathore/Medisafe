@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="140dp"
     android:background="@drawable/navibackground"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleimg"
         android:layout_width="60dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="28dp"
         android:src="@drawable/user_pro"
-        android:layout_height="60dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_wrapHeight="60"
+        tools:layout_conversion_wrapWidth="60" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/username_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/circleimg"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="13dp"
-        android:textSize="13dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/username"
         android:textColor="#FFFF"
-        android:text="@string/username"/>
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintLeft_toRightOf="@id/circleimg"
+        app:layout_constraintStart_toEndOf="@+id/circleimg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_wrapHeight="18"
+        tools:layout_conversion_wrapWidth="59" />
 
     <TextView
         android:id="@+id/edit_profile"
         android:layout_width="wrap_content"
-        android:text="@string/editprofile"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="3dp"
-        android:textSize="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/editprofile"
         android:textColor="#FFFF"
-        android:layout_toRightOf="@id/circleimg"
-        android:layout_below="@id/username"/>
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintLeft_toRightOf="@id/circleimg"
+        app:layout_constraintStart_toEndOf="@+id/circleimg"
+        app:layout_constraintTop_toBottomOf="@+id/username_header"
+        tools:layout_conversion_wrapHeight="20"
+        tools:layout_conversion_wrapWidth="68" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

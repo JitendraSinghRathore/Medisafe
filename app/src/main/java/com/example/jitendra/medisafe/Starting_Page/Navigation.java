@@ -1,7 +1,9 @@
 package com.example.jitendra.medisafe.Starting_Page;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -21,9 +23,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import com.example.jitendra.medisafe.Morenew;
 import com.example.jitendra.medisafe.R;
 import com.example.jitendra.medisafe.Tab_Navi_Fragment.Home;
 import com.example.jitendra.medisafe.Tab_Navi_Fragment.Medication;
@@ -40,7 +41,11 @@ public class Navigation extends AppCompatActivity
     TabLayout tabLayout;
     ViewPager viewPager;
     android.app.ActionBar actionBar;
-    CircleImageView circleImageView;
+    CircleImageView circleImageView,circleimg;
+    TextView user_name_header;
+    String user_name;
+    Context context;
+    public static final String MyPREFERENCES = "MyPrefs" ;
 
     private int tabicon[]={R.drawable.home,R.drawable.madici,R.drawable.update,R.drawable.list};
 
@@ -54,16 +59,18 @@ public class Navigation extends AppCompatActivity
         viewPager=(ViewPager)findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout=(TabLayout)findViewById(R.id.tabview);
+        user_name_header=(TextView) findViewById(R.id.profile_name);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcon();
 
         circleImageView=(CircleImageView) findViewById(R.id.profile_image);
+        circleimg=(CircleImageView) findViewById(R.id.circleimg);
 
 
         circleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Navigation.this,Edit_Activity.class);
+                Intent intent=new Intent(Navigation.this, Profile_Activity.class);
                 startActivity(intent);
             }
         });
@@ -74,8 +81,47 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
+        SharedPreferences sp = getApplicationContext().getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        user_name = sp.getString("Name", "");
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerview = navigationView.getHeaderView(0);
+        TextView profilename = (TextView) headerview.findViewById(R.id.username_header);
+        TextView editname = (TextView) headerview.findViewById(R.id.edit_profile);
+        profilename.setText(user_name);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (profilename.length() >0)
+        {
+            editname.setText("Edit Profile");
+        }
+        else
+        {
+            editname.setText("Create Profile");
+        }
+
+        editname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Navigation.this, Profile_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+       /* SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        user_name = sharedPreferences.getString("Name", "");*/
+
+        user_name_header.setText(user_name);
+
+
+        /*Intent intent=getIntent();
+        user_name=  intent.getStringExtra("name");
+        user_name_header.setText(user_name);*/
+
     }
 
 

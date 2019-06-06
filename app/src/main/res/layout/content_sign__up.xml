@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Starting_Page.Sign_Up"
+    tools:showIn="@layout/activity_sign__up">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/colorAccent"
+            android:scaleType="centerCrop"
+            tools:ignore="DuplicateIds" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textColor="#FFF"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:text="Register to securely back up your data on Our \nserves."
+            android:layout_height="wrap_content" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_below="@id/header_cover_image"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:text="Email"
+                       android:textSize="15dp"
+                       android:textColor="@color/colorAccent"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Email"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Password"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Password"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text=" By clicking the Sign Up button you consent to the \n association of your personal information with your health\n
+information and confirm you hava read and agreed to our \n Terms and Privacy Policy"
+        android:layout_above="@id/button_sing_up"
+        android:layout_marginBottom="40dp"
+        android:textColor="#808080" />
+
+
+    <Button
+        android:id="@+id/button_sing_up"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        android:text="SIGN UP"
+        android:textColor="#FFF" />
+</RelativeLayout>

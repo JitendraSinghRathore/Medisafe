@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/image_view_flag"
+        android:layout_width="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/doctor" />
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="India"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+</LinearLayout>

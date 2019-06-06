@@ -1,179 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Starting_Page.Edit_Activity"
+    tools:context=".Starting_Page.Profile_Activity"
     tools:showIn="@layout/activity_edit_">
 
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/header_cover_image"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/user_back"
-            android:scaleType="centerCrop"
-            tools:ignore="DuplicateIds" />
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circle_image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_below="@+id/header_cover_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-60dp"
-            android:src="@drawable/user_pro" />
+    <ImageView
+        android:id="@+id/header_cover_image"
+        android:layout_width="wrap_content"
+        android:layout_height="211dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/user_back"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/f_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/circle_image"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/help" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp"
-                    android:hint="Frist Name"
-                    android:textSize="15dp" />
-
-            </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/header_cover_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/user_pro"
+        app:layout_constraintBottom_toTopOf="@+id/f_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_cover_image"
+        app:layout_constraintVertical_bias="0.18" />
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="75dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:hint="Last Name"
-                android:textSize="15dp" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/useravtar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:id="@+id/male"
-                android:layout_marginTop="20dp"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginRight="20dp"
-                        android:hint="Gender"
-                        android:textSize="15dp" />
-
-
-                    <Spinner
-                        android:id="@+id/spinner"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="80dp"
-                        tools:ignore="RtlCompat" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+    <EditText
+        android:id="@+id/f_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Frist Name"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginRight="20dp"
-                        android:hint="Birth Year"
-                        android:textSize="15dp" />
+    <EditText
+        android:id="@+id/l_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Last Name"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/f_name"
+        app:layout_constraintTop_toBottomOf="@+id/f_name"
+        app:layout_constraintVertical_bias="0.033" />
 
 
-                    <Spinner
-                        android:id="@+id/spinnerr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginTop="5dp"
-                        tools:ignore="RtlCompat" />
-                </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Gender"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_name" />
 
 
-            </LinearLayout>
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlCompat" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/appo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Birth Year"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_name" />
+
+    <Spinner
+        android:id="@+id/spinner_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/zipcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="ZIP code"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_dob" />
 
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/appo" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp"
-                    android:hint="ZIP code"
-                    android:textSize="15dp" />
-
-            </LinearLayout>
-
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:background="#008b95"
-                android:layout_marginTop="50dp"
-
-                android:textColor="#FFF"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal"
-
-                android:text="SIGN UP DETAILS"
-                android:layout_height="40dp" />
-
-        </LinearLayout>
-
-        #00849100
+    <Button
+        android:id="@+id/button_sing_up"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#008b95"
+        android:gravity="center"
+        android:text="SIGN UP DETAILS"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_cover_image"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 
 
-    </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
 
-</RelativeLayout>
+</ScrollView>

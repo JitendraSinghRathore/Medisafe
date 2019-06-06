@@ -94,6 +94,11 @@ public class Morenew extends Fragment {
             MoreData movie = moreData.get(position);
             holder.name.setText(movie.getTitle());
             holder.imageView.setImageResource(movie.getImage());
+
+
+
+
+
         }
 
         @Override
